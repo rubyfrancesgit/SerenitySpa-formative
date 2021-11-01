@@ -1,0 +1,242 @@
+body{
+    background: #F8F3E9;
+}
+
+.top-nav{
+    width: 100vw;
+    height: 5vw;
+    background: #765F4F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8rem;
+    padding-right: 8rem;
+
+    &__div{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__ul{
+        display: flex;
+        list-style: none;
+        margin-bottom: 0px;
+    }
+
+    &__li{
+        padding-left: 2rem;
+        color: white;
+        font-family: 'Lato', sans-serif;
+    }
+
+    &__h1{
+        font-family: 'Cardo', serif;
+        color: white;
+    }
+
+    &__img{
+        // width: 2rem;
+        height: 100%;
+        margin-left: 3rem;
+    }
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 360px;
+    background: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+
+    &__input{
+        border: none;
+        text-align: left;
+        font-size: 1rem;
+        background: rgba(210, 105, 30, 0);
+        color: rgb(170, 170, 170);
+
+        &:focus::placeholder{
+            color: transparent;
+        }
+    }
+
+    &__icon{
+        color: rgb(109, 109, 109);
+        justify-content: flex-end;
+    }
+}
+
+.landing{
+    width: 100vw;
+    height: 40vh;
+    background: #EDDFD1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text-div{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__h1{
+        font-family: 'Cardo', serif;
+        font-size: 6rem;
+        margin-left: 10rem;
+        width: 20ch;
+        padding-bottom: 2rem;
+    }
+
+    &__icon-div{
+        display: flex;
+    }
+
+    &__p{
+        width: 40ch;
+        font-size: 1.2rem;
+        margin-left: 5rem;
+        font-family: 'Lato', sans-serif;
+    }
+
+    &__img-div{
+        width: 40%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img1{
+        height: 100%;
+        border-radius: 0px 150px 0px 0px;
+    }
+
+    &__img2{
+        width: 30%;
+        padding-bottom: 15rem;
+        padding-right: 5rem;
+        margin-left: 5rem;
+    }
+}
+
+.title{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__h1{
+        margin-bottom: 0px;
+        font-family: 'Lato', sans-serif;
+        color: #765F4F;
+    }
+}
+
+.parent-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filter-container{
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: 8rem;
+    padding-right: 5rem;
+
+    &__sort-by{
+        background: white;
+        border: 1px solid #EDDFD1;
+        text-align: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    &__form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    &__button{
+        background: white;
+        border: none;
+        padding: .5rem;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    &__label{
+        padding-right: 1rem;
+        font-family: 'Lato', sans-serif;
+    }
+
+    &__label2{
+        padding-left: 2rem;
+    }
+}
+
+.card-container{
+    width: 100vw;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-right: 8rem;
+}
+
+.card{
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: 3rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.top-img{
+    height: 10rem;
+    width: 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.img-div{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-div img{
+    height: 90%;
+}
+
+input:focus{
+    outline: none;
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- jquery cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- font awesome script tag -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js" integrity="sha512-cyAbuGborsD25bhT/uz++wPqrh5cqPh1ULJz4NSpN9ktWcA6Hnh9g+CWKeNx2R0fgQt+ybRXdabSBgYXkQTTmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- fontawesome style -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Serenity Spa</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+
+        <nav class="top-nav">
+          <h1 class="top-nav__h1">Serenity Spa</h1>
+
+          <div class="top-nav__div">
+            <div class="search-container">
+              <input class="search-container__input" type="text" name="search" value="" id="searchWord" placeholder="search">
+              <div id="searchFilter"><i class="fas fa-search search-container__icon"></i></div>
+            </div>
+
+            <ul class="top-nav__ul">
+              <li class="top-nav__li">home</li>
+              <li class="top-nav__li">about</li>
+              <img class="top-nav__img" src="./images/bag-icon-white.svg" alt="bag icon">
+            </ul>
+
+          </div>
+        </nav>
+
+        <section class="landing">
+          <div class="landing__text-div">
+            <h1 class="landing__h1">Soothe your senses</h1>
+            <div class="landing__icon-div">
+              <img src="./images/Stars2.svg" alt="stars icon">
+              <p class="landing__p">Here at Serenity Spa we're all about creating a soothing experiencefor your senses. Relax with a massage, or scrub up with one of our home-made soaps.</p>
+              
+            </div>
+
+          </div>
+          <div class="landing__img-div">
+            <img class="landing__img1" src="./images/portrait.jpg" alt="woman portrait">
+            <img class="landing__img2" src="./images/Stars.svg" alt="stars icon">
+          </div>
+        </section>
+
+        <div class="title">
+          <h1 class="title__h1">Best Sellers</h1>
+        </div>
+
+        <div class="parent-container">
+          <div class="filter-container">
+            <select class="filter-container__sort-by" name="" id="sortBtn">
+              <option value="">Sort By</option>
+              <option value="name">Name A-Z</option>
+            </select>
+  
+            <form class="filter-container__form" action="">
+              <div class="filter-container__filter-div">
+                <label class="filter-container__label" for="filter">Services</label>
+                <input class="filter-container__input" type="checkbox" name="filter" value="service">
+    
+                <label class="filter-container__label filter-container__label2" for="filter">Products</label>
+                <input class="filter-container__input" type="checkbox" name="filter" value="product">
+              </div>
+
+  
+              <button class="filter-container__button" id="filterBtn" type="submit">Filter</button>
+            </form>
+  
+            <div class="filter-container__form">
+              <div>
+                <label class="filter-container__label" for="productType">Soaps</label>
+                <input type="radio" name="productType" value="soap">
+    
+                <label class="filter-container__label filter-container__label2" for="productType">Serums</label>
+                <input type="radio" name="productType" value="serum">
+              </div>
+  
+              <button class="filter-container__button" id="filterBtn2" type="submit">Filter</button>
+            </div>
+  
+            <button class="btn" id="refresh">Refresh Filters</button>
+          </div>
+  
+  
+          <div id="card-container" class="card-container"></div>
+  
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div id="objectArrayModalInfo" class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- my script tag -->
+        <script src="./script.js"></script>
+    </body>
+</html>
